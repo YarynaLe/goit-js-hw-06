@@ -15,17 +15,18 @@ const ingredients = [
 ];
 
 
-const allIngredients = document.querySelector('#ingredients');
+const noteIngredients = document.querySelector('#ingredients');
+
 
 const kindIngredients = ingredient => {
-return ingredient.map(ingredient => {
-const allIngredients = document.createElement('li');
-allIngredients.classList = 'item';
-allIngredients.textContent = ingredient;
+  return ingredient.map(ingredient => {
+    const allIngredients = document.createElement('li');
+    allIngredients.classList = 'item';
+    allIngredients.textContent = ingredient;
 
-return allIngredients;
-});
+  return allIngredients;
+  });
 };
 
 const ingredient = kindIngredients(ingredients);
-allIngredients.append(...ingredient);
+noteIngredients.append(...ingredient);
